@@ -1,16 +1,16 @@
 /* My Solution */
 function highestRank(arr) {
-  let count = {};
+  let counts = {};
 
   for (let i = 0; i < arr.length; i++) {
-    // 同 count[arr[i]] = ++count[arr[i]] || 1;
-    count[arr[i]] = ~~count[arr[i]] + 1;
+    // 同 counts[arr[i]] = ++counts[arr[i]] || 1;
+    counts[arr[i]] = ~~counts[arr[i]] + 1;
   }
 
-  return +Object.keys(count).reduce((prev, curr) =>
-    count[curr] > count[prev]
+  return +Object.keys(counts).reduce((prev, curr) =>
+    counts[curr] > counts[prev]
       ? curr
-      : count[curr] == count[prev]
+      : counts[curr] == counts[prev]
       ? Math.max(curr, prev)
       : prev
   );
