@@ -6,11 +6,11 @@ function rot(strng) {
     .join("");
 }
 function selfieAndRot(strng) {
-  const dot = ".".repeat(strng.indexOf("\n"));
+  const dots = ".".repeat(strng.indexOf("\n"));
   const newrot = rot(strng)
     .split("\n")
-    .join(`\n${dot}`);
-  return strng.split("\n").join(`${dot}\n`) + `${dot}\n${dot}` + newrot;
+    .join("\n" + dots);
+  return strng.split("\n").join(dots + "\n") + `${dots}\n${dots}${newrot}`;
 }
 function oper(fct, s) {
   return fct(s);
