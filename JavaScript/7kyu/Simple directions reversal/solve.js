@@ -16,6 +16,7 @@ function solve(arr) {
   });
 
   for (let i = 0; i < arr.length; i++) {
+    // 重點
     result.unshift(map[directions[(i + 1) % arr.length]] + " on " + roads[i]);
   }
 
