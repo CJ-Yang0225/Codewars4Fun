@@ -7,7 +7,8 @@ Complete the function to return true if the two arguments given are anagrams of 
 Examples
 "foefet" is an anagram of "toffee"
 
-"Buckethead" is an anagram of "DeathCubeK"*/
+"Buckethead" is an anagram of "DeathCubeK"
+------------------------------------------------------------------------------*/
 
 /* Array.sort 使用合併排序法(Merge)。時間複雜度 O(nlogn) */
 var isAnagram = function (test, original) {
