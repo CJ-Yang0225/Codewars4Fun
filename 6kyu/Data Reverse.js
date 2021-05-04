@@ -6,6 +6,7 @@ function dataReverse(data) {
 
   if (!data.length) return [];
 
+  // 若 data / 8 為基數時，兩端會指向同一位置，所以要 <=
   while (left <= right) {
     for (let i = 0; i < 8; i++) {
       segmentData[right + i] = data[left + i];
