@@ -55,12 +55,12 @@ and a tower of 6 floors looks like below
 // }
 
 function towerBuilder(nFloors) {
-  // [...Array(nFloors)] -> ['undefined', ... , 'undefined']
-  return [...Array(nFloors)].map((_, key) => {
+  // [...new Array(nFloors)] -> ['undefined', ... , 'undefined']
+  return [...new Array(nFloors)].map((_, level) => {
     return (
-      " ".repeat(nFloors - key - 1) +
-      "*".repeat(2 * key + 1) +
-      " ".repeat(nFloors - key - 1)
+      " ".repeat(nFloors - level - 1) +
+      "*".repeat(2 * level + 1) +
+      " ".repeat(nFloors - level - 1)
     );
   });
 }
